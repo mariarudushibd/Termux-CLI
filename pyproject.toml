@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "termux-cli"
+version = "0.1.0"
+description = "Lightweight coding agent that runs in your terminal & Termux"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Termux-CLI Contributors"}]
+keywords = ["cli", "terminal", "termux", "coding", "agent", "ai", "llm", "mcp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "anthropic>=0.18.0",
+    "openai>=1.12.0",
+    "requests>=2.31.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+termux-cli = "cli.main:main"
+
+[project.urls]
+Homepage = "https://github.com/mariarudushibd/Termux-CLI"
+Repository = "https://github.com/mariarudushibd/Termux-CLI"
+Issues = "https://github.com/mariarudushibd/Termux-CLI/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "cli*", "tools*", "models*", "plugins*", "mcp*", "config*", "utils*", "prompts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"]
