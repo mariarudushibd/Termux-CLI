@@ -1,22 +1,63 @@
+<div align="center">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Termux.svg/1280px-Termux.svg.png" alt="Termux Logo" width="150"/>
+
 # Termux-CLI 🖥️
+
+### Lightweight coding agent that runs in your terminal & Termux
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![GitHub Stars](https://img.shields.io/github/stars/mariarudushibd/Termux-CLI?style=social)](https://github.com/mariarudushibd/Termux-CLI)
 
-**Lightweight coding agent that runs in your terminal & Termux**
+**A powerful local coding agent that can read, modify, and run code on your machine in any chosen directory.**
 
-A powerful local coding agent that can read, modify, and run code on your machine in any chosen directory. Works on Linux, macOS, and Android (via Termux).
+*Works seamlessly on Linux, macOS, and Android (via Termux)*
+
+[Features](#-features) • [Quick Start](#-quick-start) • [Usage](#-usage) • [Documentation](#-documentation) • [Contributing](#-contributing)
+
+---
+
+</div>
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Coding Agent** - Intelligent code assistance with Claude, GPT, or local Ollama models
-- 📁 **File Operations** - Read, write, edit, and search files
-- ⚡ **Code Execution** - Run Python, JavaScript, Bash, and more
-- 🔧 **Slash Commands** - Built-in and custom commands (`/help`, `/init`, `/review`)
-- 🧠 **Memory System** - Persistent context with `AGENTS.md` files
-- 🔌 **Plugin Architecture** - Extend functionality with custom plugins
-- 🔗 **MCP Support** - Model Context Protocol integration
-- 📱 **Termux Compatible** - Full support for Android terminal
+<table>
+<tr>
+<td width="50%">
+
+### 🤖 AI-Powered Coding Agent
+Intelligent code assistance with Claude, GPT, or local Ollama models
+
+### 📁 File Operations
+Read, write, edit, and search files with ease
+
+### ⚡ Code Execution
+Run Python, JavaScript, Bash, and more directly
+
+### 🔧 Slash Commands
+Built-in and custom commands (`/help`, `/init`, `/review`)
+
+</td>
+<td width="50%">
+
+### 🧠 Memory System
+Persistent context with `AGENTS.md` files
+
+### 🔌 Plugin Architecture
+Extend functionality with custom plugins
+
+### 🔗 MCP Support
+Model Context Protocol integration
+
+### 📱 Termux Compatible
+Full support for Android terminal
+
+</td>
+</tr>
+</table>
+
+---
 
 ## 🚀 Quick Start
 
@@ -32,7 +73,7 @@ cd Termux-CLI
 pip install -e .
 ```
 
-### Termux (Android)
+### 📱 Termux (Android)
 
 ```bash
 pkg update && pkg upgrade
@@ -40,14 +81,14 @@ pkg install python git
 pip install termux-cli
 ```
 
-### Set API Key
+### 🔑 Set API Key
 
 ```bash
 export ANTHROPIC_API_KEY="your-key-here"
 # Or use local Ollama (no key needed)
 ```
 
-### Run
+### ▶️ Run
 
 ```bash
 # Interactive mode
@@ -60,9 +101,11 @@ termux-cli --dir /path/to/project
 termux-cli -p "Explain this codebase"
 ```
 
+---
+
 ## 📖 Usage
 
-### Interactive Session
+### 💬 Interactive Session
 
 ```
 $ termux-cli
@@ -88,7 +131,7 @@ I'll list the files in your project:
 I'll add a JSON parsing function to utils.py...
 ```
 
-### Slash Commands
+### ⚡ Slash Commands
 
 | Command | Description |
 |---------|-------------|
@@ -100,7 +143,7 @@ I'll add a JSON parsing function to utils.py...
 | `/review` | Request code review |
 | `/exit` | Exit the agent |
 
-### Custom Commands
+### 🎯 Custom Commands
 
 Create reusable prompts:
 
@@ -113,7 +156,7 @@ echo "Review this code for security issues" > .termux-cli/commands/security.md
 > /security
 ```
 
-### Memory with AGENTS.md
+### 🧠 Memory with AGENTS.md
 
 Create an `AGENTS.md` file to give the agent persistent context:
 
@@ -131,6 +174,8 @@ Create an `AGENTS.md` file to give the agent persistent context:
 ## Architecture
 @docs/architecture.md
 ```
+
+---
 
 ## 🏗️ Project Structure
 
@@ -163,6 +208,8 @@ termux-cli/
 └── docs/           # Documentation
 ```
 
+---
+
 ## 🔧 Configuration
 
 Create `.termux-cli.json` in your project or home directory:
@@ -183,6 +230,8 @@ Create `.termux-cli.json` in your project or home directory:
 }
 ```
 
+---
+
 ## 🔌 MCP Integration
 
 Connect to MCP servers for extended capabilities:
@@ -202,17 +251,32 @@ Connect to MCP servers for extended capabilities:
 }
 ```
 
+---
+
 ## 📚 Documentation
 
-- [Installation Guide](docs/installation.md)
-- [Usage Guide](docs/usage.md)
-- [CLI Reference](docs/cli-reference.md)
-- [Slash Commands](docs/slash-commands.md)
-- [Memory Management](docs/memory.md)
-- [MCP Integration](docs/mcp.md)
-- [Termux Setup](docs/termux-setup.md)
-- [Plugin Development](docs/plugins.md)
-- [Contributing](CONTRIBUTING.md)
+<table>
+<tr>
+<td>
+
+- 📦 [Installation Guide](docs/installation.md)
+- 📖 [Usage Guide](docs/usage.md)
+- 🛠️ [CLI Reference](docs/cli-reference.md)
+- ⚡ [Slash Commands](docs/slash-commands.md)
+
+</td>
+<td>
+
+- 🧠 [Memory Management](docs/memory.md)
+- 🔗 [MCP Integration](docs/mcp.md)
+- 📱 [Termux Setup](docs/termux-setup.md)
+- 🔌 [Plugin Development](docs/plugins.md)
+
+</td>
+</tr>
+</table>
+
+---
 
 ## 🤝 Contributing
 
@@ -228,17 +292,35 @@ cd Termux-CLI
 ./scripts/test.sh
 ```
 
+### 🌟 Contributors
+
+Thanks to all our contributors!
+
+<a href="https://github.com/mariarudushibd/Termux-CLI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mariarudushibd/Termux-CLI" />
+</a>
+
+---
+
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🙏 Acknowledgments
 
 Inspired by:
-- [Claude Code](https://claude.ai/code) - Anthropic's coding agent
-- [Termux](https://termux.dev/) - Android terminal emulator
-- [XFCE Terminal](https://gitlab.xfce.org/apps/xfce4-terminal) - Terminal architecture reference
+- **[Claude Code](https://claude.ai/code)** - Anthropic's coding agent
+- **[Termux](https://termux.dev/)** - Android terminal emulator
+- **[XFCE Terminal](https://gitlab.xfce.org/apps/xfce4-terminal)** - Terminal architecture reference
 
 ---
 
-**Made with ❤️ for developers who code everywhere**
+<div align="center">
+
+### Made with ❤️ for developers who code everywhere
+
+**[⭐ Star us on GitHub](https://github.com/mariarudushibd/Termux-CLI)** | **[🐛 Report Bug](https://github.com/mariarudushibd/Termux-CLI/issues)** | **[✨ Request Feature](https://github.com/mariarudushibd/Termux-CLI/issues)**
+
+</div>
